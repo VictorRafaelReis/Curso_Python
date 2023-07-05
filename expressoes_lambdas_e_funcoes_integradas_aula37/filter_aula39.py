@@ -61,7 +61,28 @@ filter() -> Server para filtrar dados de uma determinada coleção.
     
     #Filtrar os usuários que estão inativos no Twitter (ainda não twitaram)
 
-        inativos = list(filter(lambda usuario: len(usuario['tweets']) == 0, usuarios))
+        #Forma 1:
+
+            inativos = list(filter(lambda usuario: len(usuario['tweets']) == 0, usuarios))
         
-        print(inativos) #Resultado será [{'username': 'jeff', 'tweets': []}, {'username': 'bob123', 'tweets': []}, {'username': 'gal', 'tweets': []}]
+            print(inativos) #Resultado será [{'username': 'jeff', 'tweets': []}, {'username': 'bob123', 'tweets': []}, {'username': 'gal', 'tweets': []}]
+
+            
+        #Forma 2:
+
+            inativos = list(filter(lambda usuario: not usuario['tweets'], usuarios))
+
+            print(inativos) #Resultado será [{'username': 'jeff', 'tweets': []}, {'username': 'bob123', 'tweets': []}, {'username': 'gal', 'tweets': []}]
+
+    
+    #Combinando filter() e map()
+
+        nomes = ['Vanessa', 'Ana', 'Maria']
+
+        #Iremos criar uma lista contendo 'Sua instrutora é' + nome, desde que o nome tenha menos de 5 caracteres
+
+        lista = list(map(lambda nome: f'Sua instrutora é {nome}', filter(lambda nome: len(nome) < 5, nomes)))
+
+        print(lista) #Resultado será ['Sua instrutora é Ana']
+        
 """
