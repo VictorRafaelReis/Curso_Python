@@ -35,8 +35,30 @@ Como o Próprio nome diz, sorted() serve para ordenar.
             {"username": "bob123", "tweets": []},
             {"username": "doggo", "tweets": ["Eu gosto de cachorros", "Vou sair hoje"]},
             {"username": "gal", "tweets": []}
+        ]
+
+        print(usuarios)
+
+        #Ordenando por username - Ordem Alfabética
+        print(sorted(usuarios, key=lambda usuario: usuario['username']))
+
+        #Ordenando pelo número de tweets - Ordem crescente
+        print(sorted(usuarios, key=lambda usuario: len(usuario['tweets'])))
+
+
+#Último Exemplo
+
+    musicas = [
+        {"titulo": "Thunderstruck", "tocou": 3},
+        {"titulo": "Comfortably Numb", "tocou": 5},
+        {"titulo": "Paint it Black", "tocou": 2},
+        {"titulo": "November Rain", "tocou": 8}
     ]
 
-    
+    #Ordena da menos tocada para a mais tocada
+    print(sorted(musicas, key=lambda musica: musica['tocou'])) #Resultado será [{'titulo': 'Paint it Black', 'tocou': 2}, {'titulo': 'Thunderstruck', 'tocou': 3}, {'titulo': 'Comfortably Numb', 'tocou': 5}, {'titulo': 'November Rain', 'tocou': 8}]
+
+    #Ordena da mais tocada para a menos tocada
+    print(sorted(musicas, key=lambda musica: musica['tocou'], reverse=True)) #Resultado será [{'titulo': 'November Rain', 'tocou': 8}, {'titulo': 'Comfortably Numb', 'tocou': 5}, {'titulo': 'Thunderstruck', 'tocou': 3}, {'titulo': 'Paint it Black', 'tocou': 2}]
 
 """
