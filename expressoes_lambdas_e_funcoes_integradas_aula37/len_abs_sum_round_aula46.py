@@ -45,7 +45,7 @@ Len, Abs, Sum, Round
 
 #OBS: O valor inicial default é 0
 
-#Exemplos sum():
+#Exemplos sum()
 
     print(sum([1, 2, 3, 4, 5])) #Soma esses valores pra mim... Resultado será 15
 
@@ -59,4 +59,21 @@ Len, Abs, Sum, Round
     print(sum({1, 2, 3, 4, 5})) #Resultado será 15
 
     print(sum({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}.values())) #Resultado será 15
+
+
+#Round
+
+- round() -> Retorna um número arredondado para n digito de precisão após a casa decimal. Se a precisão não for informada retorna o inteiro mais próximo da entrada.
+
+#Exemplos round()
+
+    print(round(10.2)) #Resultado será 10
+
+    print(round(10.5)) #Resultado será 10
+
+    print(round(10.6)) #Resultado será 11
+
+    print(round(1.2121212121, 2)) #Resultado será 1.21
+
+    print(round(1.21999999, 2)) #Resultado será 1.22
 """
