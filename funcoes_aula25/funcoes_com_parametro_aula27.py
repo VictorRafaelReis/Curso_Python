@@ -95,9 +95,9 @@ def soma_impares(numeros):
             total += num
     return total
 
-lista = [1, 2, 3, 4, 5, 6, 7]
-print(soma_impares(lista))
+#lista = [1, 2, 3, 4, 5, 6, 7]
+#print(soma_impares(lista))
 
-tupla = (1, 2, 3, 4, 5, 6, 7)
-print(soma_impares(tupla))
+#tupla = (1, 2, 3, 4, 5, 6, 7)
+#print(soma_impares(tupla))
 
