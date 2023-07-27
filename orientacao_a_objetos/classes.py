@@ -24,10 +24,11 @@ maiúsculo, todas juntas.
 
     class Lampada:
         pass
-        
+
     
     class ContaCorrente:
         pass
 
 
+OBS: Quando estamos planejando um software e definimos quais classes teremos que ter no sistema, chamamos estes objetos que serão mapeados para classes de entidade.
 """
